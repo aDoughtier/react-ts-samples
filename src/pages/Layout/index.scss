@@ -1,0 +1,21 @@
+@import "@/assets/css/mixin";
+.zx-layout {
+  .ant-layout {
+    height: 100vh;
+    .ant-layout-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      .ant-breadcrumb {
+        background: linear-gradient(45deg, #d4cdcd 0%, #6f6c6c 100%);
+        margin: 0;
+        padding: 8px 0;
+      }
+      .zx-main-container {
+        padding: 8px;
+        flex: auto;
+        @include scrollBar();
+      }
+    }
+  }
+}
