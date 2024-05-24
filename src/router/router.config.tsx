@@ -28,17 +28,18 @@ const menuData: MenuItem[] = [
   getItem("快速入门", "start", <PieChartOutlined />,[
     getItem("教程：井字棋", "/game", )
   ]),
-  getItem("描述UI", "describe", <DesktopOutlined />,[
-    getItem("安装-使用TypeScript", "/ts-useContext", )
+  getItem("状态管理", "describe", <DesktopOutlined />,[
+    getItem("使用 useState", "/status-use-state", ),
+    getItem("使用 Context", "/status-useContext", ),
+    getItem("结合reducer 和 context ", "/status-context-reducer", )
   ]),
-  getItem("User", "sub1", <UserOutlined />, [
-    getItem("Tom", "3", <UserOutlined />, [getItem("Tom 1", "6")]),
-    getItem("Bill", "4"),
-    getItem("Alex", "5"),
+  getItem("逃生窗口", "escape", <UserOutlined />, [
+    getItem("使用 useRef", "/EscapeUseRef", )
   ]),
-  getItem("Team", "sub2", <TeamOutlined />, [
-    getItem("Team 1", "6"),
-    getItem("Team 2", "8"),
+  getItem("Hooks", "hooks", <TeamOutlined />, [
+    getItem("useState", "/hooks-useState" ),
+    getItem("useRef", "/hooks-useRef" ),
+    getItem("useEffect", "/hooks-useEffect" ),
   ]),
   getItem("Files", "9", <FileOutlined />),
 ];
@@ -64,10 +65,36 @@ const routeData: RouteType[] = [
         text:"教程：井字棋",
       },
       {
-        path: '/ts-useContext',
-        element: lazy(() => import("@/pages/TSUseContext")),
-        text:"安装-使用TypeScript"
-      }
+        path: '/status-use-state',
+        element: lazy(() => import("@/pages/StatusUseState")),
+        text:"使用 useState"
+      },
+      {
+        path: '/status-useContext',
+        element: lazy(() => import("@/pages/StatusContext")),
+        text:"使用 Context"
+      },
+      {
+        path: '/status-context-reducer',
+        element: lazy(() => import("@/pages/StatusReducerContext")),
+        text:"Reducer Context"
+      },
+      {
+        path: '/EscapeUseRef',
+        element: lazy(() => import("@/pages/EscapeUseRef")),
+        text:"EscapeUseRef"
+      },
+      {
+        path: '/hooks-useState',
+        element: lazy(() => import("@/pages//hooks/UseState")),
+        text:"hooks-useState"
+      },
+      {
+        path: '/hooks-useRef',
+        element: lazy(() => import("@/pages//hooks/UseRef")),
+        text:"hooks-useRef"
+      },
+
     ]
   }
 ]

@@ -41,7 +41,6 @@ const App: React.FC = () => {
             </Breadcrumb>
             <div className="zx-main-container">
               <Outlet />
-              <div style={{height:2000}}>333</div>
             </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>
